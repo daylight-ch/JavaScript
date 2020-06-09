@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 500px;
+            height: 400px;
+            margin: 200px auto;
+        }
+
+        .box {
+            width: 500px;
+            height: 80px;
+        }
+
+        input {
+            border: none;
+            width: 500px;
+            height: 80px;
+            transition: 1s;
+        }
+
+        input[id="btn"]:hover {
+            background: skyblue;
+            border: none;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-style: normal;
+            line-height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h2>体重测试</h2>
+        <input type="text" id="myHeight" placeholder="身高">
+        <input type="text" id="myWeight" placeholder="体重">
+        <div class="box">
+            <input type="button" value="确定" id="btn">
+        </div>
+        <input type="text" id="myResult" placeholder="您的体重是否正常">
+    </form>
+    <script>
+        btn.onclick = function () {
+            var heit = Number(myHeight.value);
+            var weit = Number(myWeight.value);
+
+            if ((heit - 108) * 2 - weit <= 10 && (heit - 108) * 2 - weit >= -10) {
+                myResult.value = '体重合适'
+            }
+            else {
+                myResult.value = '体重不合适'
+            }
+        }
+    </script>
+</body>
+
+</html>
