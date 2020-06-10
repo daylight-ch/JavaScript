@@ -10,14 +10,17 @@
 <body>
     <script>
         var wangSalary = 10000;
-        var totalSalary = 0;
+        var totalSalary = wangSalary * 12;
         var i = 1;
-        while (i <= 10) {
+        while (i < 10) {
             wangSalary = wangSalary * 1.05;
+            console.log(wangSalary);
+
             i += 1;
+
             totalSalary += wangSalary * 12;
+
         }
-        console.log(parseInt(wangSalary));
         console.log(parseInt(totalSalary));
 
 
